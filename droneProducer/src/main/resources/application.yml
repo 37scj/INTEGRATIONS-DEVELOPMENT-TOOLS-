@@ -1,7 +1,9 @@
 server:
-  port: 8001
+  port: 8082
   # Interface : localhost:15672
   # Rabbit Servidor
+
+spring:
   rabbitmq:
     host: localhost
     port: 5672
@@ -9,13 +11,10 @@ server:
     username: guest
     password: guest
     # Nome do Exchanges
-    template:
-      exchange: projeto.mba.fiap
-      # RoutingKey -> Representa A Queue que a Exchange esta enviado
-      routing-key: queue.producer.mba
-      # deadletter para controlle de errros , para poder reprocessar no momento em que a aplicacao for corrigida
-
+    exchange: projeto.mba.fiap
+    # RoutingKey -> Representa A Queue que a Exchange esta enviado
+    routing-key: queue.producer.mba
+    # deadletter para controlle de errros , para poder reprocessar no momento em que a aplicacao for corrigida
+    deadletter: dl.producer.mba.queueDeadLetter
 # deadletter para controlle de errros , para poder reprocessar no momento em que a aplicacao for corrigida
-deadletter:
-  producer: dl.producer.mba.queueDeadLetter
 

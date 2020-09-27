@@ -1,5 +1,5 @@
 server:
-  port: 8080
+  port: 8081
 
 spring:
   datasource:
@@ -28,7 +28,6 @@ spring:
     # User
     username: guest
     password: guest
-  template:
     # Nome do Exchanges
     exchange: projeto.mba.fiap
     # RoutingKey -> Representa A Queue que a Exchange esta enviado
@@ -58,4 +57,4 @@ amqp:
 
 checksensors:
   fixedRate: 60000
-  send-to:
+  send-to: lucasrodriguesdonascimento@outlook.com, gabrielltr84@gmail.com

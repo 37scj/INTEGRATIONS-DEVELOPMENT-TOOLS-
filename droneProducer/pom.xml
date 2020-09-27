@@ -10,9 +10,9 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>br.com.fiap</groupId>
-    <artifactId>rabbitMQ</artifactId>
+    <artifactId>droneProducer</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>rabbitMQ</name>
+    <name>droneProducer</name>
     <description>Projeto Mensageria com RabbitMQ Drone MBA FIAP</description>
 
     <properties>
