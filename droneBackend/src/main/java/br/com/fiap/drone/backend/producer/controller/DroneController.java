@@ -45,4 +45,17 @@ public class DroneController {
         return droneService.findAllDrone();
     }
 
+    @GetMapping("/{id}")
+    public DroneDTO getById(@PathVariable Long id) {
+        return droneService.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,
+                "Drone não encontrado (id: " + id.toString() + ")"));
+    }
+
+    @ResponseStatus(HttpStatus.ACCEPTED)
+    @DeleteMapping("/{id}")
+    public void deleteDrone(@PathVariable Long id) {
+        droneService.findById(id).orElseThrow(() -> new ResponseStatusException(HttpStatus.NOT_FOUND,
+                "Drone não encontrado (id: " + id.toString() + ")"));
+        droneService.deleteById(id);
+    }
 }

@@ -14,6 +14,9 @@ public class DroneEntity implements Serializable {
     private Long id;
 
     @Column
+    private String nome;
+
+    @Column
     private Double latitude;
 
     @Column
@@ -34,6 +37,7 @@ public class DroneEntity implements Serializable {
     public DroneDTO toModel() {
         DroneDTO drone = new DroneDTO();
         drone.setId(this.getId());
+        drone.setNome(this.getNome());
         drone.setLatitude(this.getLatitude());
         drone.setLongitude(this.getLongitude());
         drone.setTemperatura(this.getTemperatura());
@@ -49,6 +53,13 @@ public class DroneEntity implements Serializable {
         this.id = id;
     }
 
+    public String getNome() {
+        return nome;
+    }
+    
+    public void setNome(String nome) {
+        this.nome = nome;
+    }
     public Double getLatitude() {
         return latitude;
     }

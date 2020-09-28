@@ -37,8 +37,9 @@ public class CheckSensorsServiceImpl implements CheckSensorsService {
             msgMail
                     .append("Drones com temperatura abaixo de zero ou maior que 35 ou umidade menor que 15: " + drones.size() + "\n")
                     .append("\n\nLista de drones:");
-            drones.forEach(d ->
-                    msgMail.append("\nID DO DRONE: " + d.getId())
+            drones.forEach(d -> msgMail
+                            .append("\nID DO DRONE: " + d.getId())
+                            .append("\nNome: " + d.getNome())
                             .append("\nLatitude: " + d.getLatitude())
                             .append("\nLongitude: " + d.getLongitude())
                             .append("\nTemperatura: " + d.getTemperatura())
