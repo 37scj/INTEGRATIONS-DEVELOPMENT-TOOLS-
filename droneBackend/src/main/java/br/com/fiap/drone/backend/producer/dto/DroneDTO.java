@@ -80,6 +80,5 @@ public class DroneDTO implements Serializable {
     public String toString() {
         return "Drone Id: " + id + " - Nome: " + nome + "\n Latitude:" + latitude + "°\n Longitude:" + longitude
                 + "°\n Temperatura:" + temperatura + " °C\n Umidade:" + umidade + " %";
-        ;
     }
 }
