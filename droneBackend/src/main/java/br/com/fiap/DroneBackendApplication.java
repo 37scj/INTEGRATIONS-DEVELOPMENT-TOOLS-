@@ -35,7 +35,7 @@ public class DroneBackendApplication {
                 .build()
                 .apiInfo(new ApiInfo(
                         "Drone Backend API",
-                        "Sensors Control",
+                        "Sensors Control Backend",
                         "1.0",
                         "Terms of service",
                         new Contact("GaLuAl", "https://github.com/37scj/", ""),

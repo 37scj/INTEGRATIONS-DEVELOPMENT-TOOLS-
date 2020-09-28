@@ -10,7 +10,7 @@ import java.io.Serializable;
 public class DroneEntity implements Serializable {
 
     @Id
-    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
 
     @Column
@@ -28,17 +28,6 @@ public class DroneEntity implements Serializable {
 
     public DroneEntity() {
         // TODO Auto-generated constructor stub
-    }
-
-    public DroneEntity(DroneDTO drone) {
-        if(drone.getId()!=null) {
-            this.setId(drone.getId());
-        }
-        this.setLatitude(drone.getLatitude());
-        this.setLongitude(drone.getLongitude());
-        this.setUmidade(drone.getUmidade());
-        this.setTemperatura(drone.getTemperatura());
-
     }
 
     @Transient

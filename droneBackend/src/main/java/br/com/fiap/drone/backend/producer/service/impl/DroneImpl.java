@@ -30,9 +30,26 @@ public class DroneImpl implements DroneService {
      */
     @Override
     public DroneDTO storeDroneInfo(DroneDTO droneParameter) {
-        logger.info("Drone Info "+droneParameter.getId());
+        logger.info("Drone Info " + droneParameter.getId());
 
-        DroneEntity drone = droneRepository.findById(droneParameter.getId()).orElse(new DroneEntity(droneParameter));
+        DroneEntity drone = droneRepository.findById(droneParameter.getId()).orElse(new DroneEntity());
+
+        if (drone.getId() != null) {
+            drone.setId(drone.getId());
+        }
+
+        if (droneParameter.getLatitude() != null) {
+            drone.setLatitude(droneParameter.getLatitude());
+        }
+        if (droneParameter.getLongitude() != null) {
+            drone.setLongitude(droneParameter.getLongitude());
+        }
+        if (droneParameter.getUmidade() != null) {
+            drone.setUmidade(droneParameter.getUmidade());
+        }
+        if (droneParameter.getTemperatura() != null) {
+            drone.setTemperatura(droneParameter.getTemperatura());
+        }
 
         DroneEntity saveDrone = droneRepository.save(drone);
 

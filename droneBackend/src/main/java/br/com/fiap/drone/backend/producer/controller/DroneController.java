@@ -31,7 +31,7 @@ public class DroneController {
     @PatchMapping
     @ResponseStatus(HttpStatus.ACCEPTED)
     public DroneDTO patchDrone(@RequestBody DroneDTO drone) {
-        if(drone.getId()!=null){
+        if (drone.getId() == null) {
             throw new ResponseStatusException(HttpStatus.BAD_REQUEST, "Necessário ID do Drone");
         }
         return droneService.storeDroneInfo(drone);
