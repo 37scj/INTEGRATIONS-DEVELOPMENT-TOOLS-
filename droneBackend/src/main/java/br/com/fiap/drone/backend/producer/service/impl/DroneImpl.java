@@ -38,6 +38,9 @@ public class DroneImpl implements DroneService {
             drone.setId(drone.getId());
         }
 
+        if (droneParameter.getNome() != null) {
+            drone.setNome(droneParameter.getNome());
+        }
         if (droneParameter.getLatitude() != null) {
             drone.setLatitude(droneParameter.getLatitude());
         }
