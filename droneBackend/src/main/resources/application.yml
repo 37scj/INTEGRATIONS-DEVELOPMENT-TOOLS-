@@ -56,5 +56,6 @@ amqp:
   url: http://localhost:8001/send
 
 checksensors:
-  fixedRate: 60000
+    # 5 minutos
+  fixedRate: 300000
   send-to: lucasrodriguesdonascimento@outlook.com, gabrielltr84@gmail.com
