@@ -3,6 +3,7 @@ package br.com.fiap.drone.backend.producer.models;
 public class DroneData {
 
     private Long id;
+    private String nome;
     private Double latitude;
     private Double longitude;
     private Double temperatura;
@@ -12,8 +13,9 @@ public class DroneData {
 
     }
 
-    public DroneData(Long id, Double latitude, Double longitude, Double temperatura, Double umidade) {
+    public DroneData(Long id, String nome, Double latitude, Double longitude, Double temperatura, Double umidade) {
         this.id = id;
+        this.nome = nome;
         this.latitude = latitude;
         this.longitude = longitude;
         this.temperatura = temperatura;
@@ -28,6 +30,14 @@ public class DroneData {
         this.id = id;
     }
 
+    public String getNome() {
+        return nome;
+    }
+
+    public void setId(String nome) {
+        this.nome = nome;
+    }
+    
     public Double getLatitude() {
         return latitude;
     }

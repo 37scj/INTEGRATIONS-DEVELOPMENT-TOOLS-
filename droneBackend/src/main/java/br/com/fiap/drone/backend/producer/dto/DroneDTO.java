@@ -76,9 +76,9 @@ public class DroneDTO implements Serializable {
         this.umidade = umidade;
     }
 
-    @Override
-    public String toString() {
-        return "Drone Id: " + id + " - Nome: " + nome + "\n Latitude:" + latitude + "°\n Longitude:" + longitude
-                + "°\n Temperatura:" + temperatura + " °C\n Umidade:" + umidade + " %";
-    }
+    // @Override
+    // public String toString() {
+    //     return "Drone Id: " + id + " - Nome: " + nome + "\n Latitude:" + latitude + "°\n Longitude:" + longitude
+    //             + "°\n Temperatura:" + temperatura + " °C\n Umidade:" + umidade + " %";
+    // }
 }
