@@ -59,7 +59,7 @@ Simulação do serviço do drone
   - Altere na properties.yml a propriedade ddl-auto do hibernate para criar as tabela automaticamente para : create-drop 
   - Crie um arquivo "data.sql" dentro de : /src/main/resources
   - Passe a seguinte instrução no arquivo data.sql: 
-       insert into tb_drone (latitude, longitude, nome, temperatura, tracking, umidade, id) values (123213.0, 3213123.0,'Drone',-1.6, false, 25.3, 1);
+                  insert into tb_drone (latitude, longitude, nome, temperatura, tracking, umidade, id) values (123213.0, 3213123.0,'Drone',-1.6, false, 25.3, 1);
       
 # Usando o Exchange Direct 
 
