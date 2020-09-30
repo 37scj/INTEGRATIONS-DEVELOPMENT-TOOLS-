@@ -42,17 +42,7 @@ Simulação do serviço do drone
 
  Use o arquivo docker na raíz do projeto.
     docker-compose up -d
-
-# Paineis
-
-## Painel do RabbitMQ
-  - http://localhost:15672/#/
-  - user e password : guest
-  
-# H2
- - H2 Console  http://localhost:8090/h2-console
-    - jdbc:h2:~/fiapstockdatabase;DB_CLOSE_ON_EXIT=FALSE
-
+    
 # Adicionando pre-drones na aplicação :
 
 - Pre-adicionando drones na base
@@ -62,12 +52,21 @@ Simulação do serviço do drone
                  
         insert into tb_drone (latitude, longitude, nome, temperatura, tracking, umidade, id) 
                 values (123213.0, 3213123.0,'Drone',-1.6, false, 25.3, 1);
+
+# Paineis
+
+## Painel do RabbitMQ
+  - http://localhost:15672/#/
+  - user e password : guest
+  
+# Base de dados H2
+ - H2 Console  http://localhost:8090/h2-console
+    - jdbc:h2:~/fiapstockdatabase;DB_CLOSE_ON_EXIT=FALSE
       
 # Usando o Exchange Direct 
 
 - Ao Executar o projeto as filas sao criadas automaticamente
 - Criacao do exchange do tipo direct que recebe a mensagem enviada pelo produtor e encaminha a mensagem para a fila destinada do produtor.
-
 
 # Usando patterns de deadLetter
 
